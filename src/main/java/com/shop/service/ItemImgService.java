@@ -9,11 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 import org.thymeleaf.util.StringUtils;
 
-<<<<<<< HEAD
 import javax.persistence.EntityNotFoundException;
 
-=======
->>>>>>> origin/master
 @Service
 @RequiredArgsConstructor
 @Transactional
@@ -40,7 +37,6 @@ public class ItemImgService{
         itemImg.updateItemImg(oriImgName,imgName,imgUrl);
         itemImgRepository.save(itemImg);
     }
-<<<<<<< HEAD
     public void updateItemImg(Long itemImgId, MultipartFile itemImgFile) throws Exception{
         if(!itemImgFile.isEmpty()){
             ItemImg savedItemImg = itemImgRepository.findById(itemImgId)
@@ -60,6 +56,4 @@ public class ItemImgService{
             savedItemImg.updateItemImg(oriImgName, imgName, imgUrl);
         }
     }
-=======
->>>>>>> origin/master
 }
